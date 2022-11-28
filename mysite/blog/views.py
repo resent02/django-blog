@@ -8,3 +8,7 @@ from django.utils import timezone
 def index(request):
     publications = Publication.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
     return render(request, "blog/index.html", {'publications': publications})
+
+
+def main_page(request):
+    return render(request, "blog/main_page.html", {})
