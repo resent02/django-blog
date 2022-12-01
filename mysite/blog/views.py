@@ -1,3 +1,5 @@
+import logging
+
 from django.shortcuts import render
 from .models import Publication
 from django.utils import timezone
@@ -12,3 +14,8 @@ def index(request):
 
 def main_page(request):
     return render(request, "blog/main_page.html", {})
+
+
+def pub_view(request, pub):
+    publication = Publication.objects.filter(title=pub)
+    return render(request, "blog/base.html", {'publication': publication[0]})
