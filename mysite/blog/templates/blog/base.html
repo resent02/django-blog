@@ -1,12 +1,19 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
     <title>{{ publication.title }}</title>
 </head>
 <body>
-    <a href="/blog">Back</a>
-    <h1>{{ publication.title }}</h1>
-    <p>{{ publication.text|linebreaksbr }}</p>
+    <div class="topnav">
+            <a href="/blog">Articles</a>
+        <a href="/">Home</a>
+    </div>
+    <h1 class="title">{{ publication.title }}</h1>
+    <div class="text-box">
+        <p>{{ publication.text|linebreaksbr }}</p>
+    </div>
 </body>
 </html>

@@ -1,5 +1,3 @@
-import logging
-
 from django.shortcuts import render
 from .models import Publication
 from django.utils import timezone

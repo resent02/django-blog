@@ -1,6 +1,4 @@
-# django-blog 
-#### Pet-project for my portfolio
-##### Wrote on Django python
+# django-blog
 # How to install and run
 
 #### Create virtual environment
